@@ -1,11 +1,10 @@
-p<?php
+<?php
 
 include_once("dbconn.php");
 $email = $_POST['email'];
 $cardNum = $_POST['cardNum'];
 $name = $_POST['name'];
 $dateOfBirth = $_POST['dateOfBirth'];
-
 
 // 빈값이 있으면 안됨.
 if ($cardNum != "" && $name != "" && $dateOfBirth != ""){
