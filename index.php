@@ -29,7 +29,7 @@
                 <?php
                     if(!$logged) { // 로그인이 안 되어있을 경우
                 ?>
-                <a class="navbar-brand" href="index.html"><img src="images/Daeflix.PNG"></a>
+                <a class="navbar-brand" href="index.php"><img src="images/Daeflix.PNG"></a>
                 <!-- 오프캔버스로 숨겨주기 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon" data-bs-toggle="tooltip" data-bs-placement="left" title="어서 들어와요!"></span>
