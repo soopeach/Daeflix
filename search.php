@@ -117,7 +117,7 @@
             <div class="row gx-5" >
                 <div class="col-lg-3 mt-3"> <!--사진이 들어갈 곳-->
                     <div class="border-0">
-                        <a href="movieDetail.php?<?=$row['title']?>"><img src="<?=$row['preview']?>" id="gallery"></a>
+                        <a href="movieDetail.php?title=<?=$row['title']?>"><img src="<?=$row['preview']?>" id="gallery"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 mt-3 pb-3" id="specbox"> <!--제목과 줄거리가 들어갈 곳-->
