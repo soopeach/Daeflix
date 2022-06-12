@@ -234,7 +234,7 @@
             ?>
             <div class="col">
                 <div class="border-0">
-                    <a href=""><img src="<?=$row['preview']?>" id="gallery"></a>
+                    <a href="movieDetail.php?title=<?=$row['title']?>"><img src="<?=$row['preview']?>" id="gallery"></a>
                     <span class="title"><?=$row['title']?></span>
                 </div>
             </div>
@@ -263,7 +263,7 @@
             <div class="col">
                 <div class="border-0">
                     
-                    <a href=""><img src="<?=$row['preview']?>" id="gallery"></a>
+                    <a href="movieDetail.php?title=<?=$row['title']?>"><img src="<?=$row['preview']?>" id="gallery"></a>
                     <span class="title"><?=$row['title']?></span>
                 </div>
             </div>
@@ -292,7 +292,7 @@
             ?>
             <div class="col">
                 <div class="border-0">
-                    <a href=""><img src="<?=$row['preview']?>" id="gallery"></a>
+                    <a href="movieDetail.php?title=<?=$row['title']?>"><img src="<?=$row['preview']?>" id="gallery"></a>
                     <span class="title"><?=$row['title']?></span>
                 </div>
             </div>
@@ -322,7 +322,7 @@
             ?>
             <div class="col">
                 <div class="border-0">
-                    <a href=""><img src="<?=$row['preview']?>" id="gallery"></a>
+                    <a href="movieDetail.php?title=<?=$row['title']?>"><img src="<?=$row['preview']?>" id="gallery"></a>
                     <span class="title"><?=$row['title']?></span>
                 </div>
             </div>
@@ -389,7 +389,7 @@
             ?>
             <div class="col">
                 <div class="border-0">
-                    <a href=""><img src="<?=$row['preview']?>" id="gallery"></a>
+                    <a href="movieDetail.php?title=<?=$row['title']?>"><img src="<?=$row['preview']?>" id="gallery"></a>
                     <span class="title"><?=$row['title']?></span>
                 </div>
             </div>

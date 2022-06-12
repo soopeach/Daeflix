@@ -17,7 +17,7 @@ if ($cardNum != "" && $name != "" && $dateOfBirth != ""){
 $likeSql =  "INSERT INTO likeVideo VALUES('$email','')";
 if($conn->query($sql) && $conn->query($likeSql)){
     
-    echo "<script>alert('회원가입에 성공하였습니다.');location.href='index.html'</script>";
+    echo "<script>alert('회원가입에 성공하였습니다.');location.href='index.php'</script>";
 }
 else
 	echo "회원가입중에 오류가 발생했습니다.";
