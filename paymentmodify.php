@@ -53,7 +53,6 @@
                 </label>
                 <div class="col-sm-9">
                     <input type="text" class="form-control" id="inputCard" value="<?=$row['cardNum']?>" placeholder="1234-5678-0123-1111" name="cardNum">
-                    
                 </div>
             </div>
             <div class="mb-3 row" id="spec">

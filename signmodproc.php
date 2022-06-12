@@ -14,7 +14,7 @@ $sql = "update user set email = '$email', password = '$password', phoneNum = '$p
 if($conn->query($sql)) {
 	$_SESSION['email'] = $email;
 	$_SESSION['nickName'] = $nickName;
-	echo "<script>alert('회원정보를 성공적으로 변경하였습니다.');location.href='index.php'</script>";
+	echo "<script>alert('회원정보를 성공적으로 변경하였습니다.');location.href='browser.php'</script>";
 
 }
 else
