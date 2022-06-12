@@ -9,6 +9,7 @@ $sqlForPayment = "delete from paymentInfo where email = '$email'";
 
 $sql = "delete from user where email = '$email'";
 
+$sqlForLikeVideo = "delete from likeVideo where email = '$email'";
 
 
 session_destroy(); 
