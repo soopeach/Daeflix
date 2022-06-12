@@ -62,10 +62,32 @@
                     </label>
                     <div class="col-sm-10">
                         <select class="form-select" aria-label="Default select" id="membershipInput" name="membership">
-                            <option selected disabled>멤버쉽을 선택해주세요!</option>
-                            <option value="베이직">베이직</option>
-                            <option value="스탠다드">스탠다드</option>
-                            <option value="프리미엄">프리미엄</option>
+                            <option disabled>멤버쉽을 선택해주세요!</option>
+                            <?php 
+                                $lastMembership = $row['membershipName'];
+                                if($lastMembership == "베이직"){
+                            ?>
+                                <option selected value="베이직">베이직</option>
+                            <?php }  else { ?>
+                                <option value="베이직">베이직</option>
+                            <?php } ?>
+
+                            <?php 
+                                if($lastMembership == "스탠다드"){
+                            ?>
+                                <option selected value="스탠다드">스탠다드</option>
+                            <?php }  else { ?>
+                                <option value="스탠다드">스탠다드</option>
+                            <?php } ?>
+
+                            <?php 
+                                if($lastMembership == "프리미엄"){
+                            ?>
+                                <option selected value="프리미엄">프리미엄</option>
+                            <?php }  else { ?>
+                                <option value="프리미엄">프리미엄</option>
+                            <?php } ?>
+                        
                         </select>
                     </div>
                 </div>
