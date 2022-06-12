@@ -1,0 +1,19 @@
+body {
+    height: 100vh; /* view port(뷰포트) 크기 */
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+}
+::-webkit-scrollbar { /* 스크롤바 안보이게 바꿔주는 CSS */
+    display: none; 
+}
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+}
+footer {
+    background-color: #323232;
+    color: #eee;
+    padding: 25px;
+    text-align: center;
+}

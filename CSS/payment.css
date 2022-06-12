@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+body {
+    height: 100vh; /* view port(뷰포트) 크기 */
+    width: auto;
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    /* 밑에꺼 막은 이유는 여기서 설정해도 브라우저에서 안먹어서 본체에 직접 설정함 */
+    /*background-color: #141414;*/
+}
+::-webkit-scrollbar { /* 스크롤바 안보이게 바꿔주는 CSS */
+    display: none; 
+}
+#formbox {
+    background-color: rgba(255, 255, 255, 0.462);
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: auto;
+    width: 500px;
+}
+#spec {
+    font-weight: 600;
+}

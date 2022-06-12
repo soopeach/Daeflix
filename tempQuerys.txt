@@ -1,0 +1,18 @@
+
+# 회원 가입 예시
+# INSERT INTO user VALUES('1234','1234','010-3333-3333','베이직');
+
+
+# 베이직 멤버십 정보 가져오기
+# select * from membership where membershipName = "베이직";
+
+
+# 회원의 결제 정보 입력하기
+# insert into paymentInfo values ("1234","1234567891011234","전현수","1999-07-19");
+
+# 회원의 결제 정보 가져오기
+# select * from paymentInfo where id = "1234";
+
+# 회원 탈퇴 - 회원 탈퇴 전 결제 정보도 삭제
+# delete from paymentInfo where id = "";
+# delete from user where id = "";
