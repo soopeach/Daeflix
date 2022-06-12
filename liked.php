@@ -135,8 +135,7 @@
                     $title = $likeVideosList[$i];
                     $LikeTitlesql = "select * from videoInfo where title = '$title'";
                     $resultLikeTitle = $conn->query($LikeTitlesql);
-                    $row = $resultLikeTitle->fetch_assoc(); 
-                    
+                    $row = $resultLikeTitle->fetch_assoc();     
             ?>
             <!-- 이 부분을 찜목록 갯수에 따라 반복시켜주면 됨 -->
             <div class="row gx-5" >
@@ -145,8 +144,18 @@
                         <a href=""><img src="<?=$row['preview']?>" id="gallery"></a>
                     </div>
                 </div>
-                <div class="col-lg-9 mt-3 pb-3" id="specbox"> <!--제목과 줄거리가 들어갈 곳-->
-                    <h3 id="title" class="mt-3"><?=$row['title']?></h3>
+                <div class="col-lg-7 mt-3 pb-3" id="specbox"> <!--제목과 줄거리가 들어갈 곳-->
+                    <h2 id="title" class="mt-3"><?=$row['title']?></h2>
+                    <hr style="height: 1px;">
+                    <h5 class="row" id="title">
+                        <div class="col-6">
+                            <?=$row['actors']?>
+                        </div>
+                        <div class="col-6">
+                            러닝타임 - <?=$row['time']?>
+                        </div>
+                    </h5>
+                    <hr style="height: 1px; color:#eee;">
                     <p id="story"><?=$row['summary']?><br>                        
                     </p>
                 </div>   
@@ -206,8 +215,7 @@
         myModal.addEventListener('shown.bs.modal', function () {
             myInput.focus()
         })
-    </script>
-    
+    </script>    
     <footer>
         <p>&copy;Copyright 2022 전현수 / 이우민</p>
     </footer>
