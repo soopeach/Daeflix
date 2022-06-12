@@ -15,6 +15,20 @@ body {
     background-color: #E50914;
     border-radius: 3px; /* 둥근 모서리 */
 }
+#tab {
+    color: #eee;
+}
+#specbox {
+    background-color: #000000;
+    border-radius: 3px;
+    color: #eee;
+}
+#gallery {
+    width: 100%;
+}
+#void {
+    height: 40vh;
+}
 footer {
     background-color: #323232;
     color: #eee;
