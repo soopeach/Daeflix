@@ -7,9 +7,9 @@ $email = $_POST['email'];
 $nickName = $_POST['nickName'];
 $password = $_POST['password'];
 $phoneNum = $_POST['phoneNum'];
-//$rdate = date("Y/m/d");  // date 함수는 시스템의 날짜를 가져오는 함수. 년/월/일 형식으로 가져옴.
+$membership = $_POST['membership'];
 #3. UPDATE SQL 구문 작성하기
-$sql = "update user set email = '$email', password = '$password', phoneNum = '$phoneNum' where email = '$email'";
+$sql = "update user set email = '$email', password = '$password', membershipName = '$membership', phoneNum = '$phoneNum' where email = '$email'";
 #4. SQL 실행하기
 if($conn->query($sql)) {
 	$_SESSION['email'] = $email;
