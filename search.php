@@ -24,6 +24,7 @@
                 $logged = true;
             }
             $title = $_POST['search'];
+            if($title =="") echo "<script>alert('검색된 영상이 없습니다!'); history.go(-1)</script>";
         ?>
         <div class="container-fluid">
             <!--상단바 로고-->
