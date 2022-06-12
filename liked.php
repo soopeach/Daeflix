@@ -13,6 +13,7 @@
 </head>
 <body style="background-color: #141414;">
     <?php
+    include_once("dbconn.php");
     session_start();
     $logged = false;
     if (isset($_SESSION['email'])){ // 세션에 id 키가 정의되어 있으면
@@ -39,7 +40,7 @@
                         <a class="nav-link active" aria-current="page">내가 찜한 목록</a>
                     </li>
                     <li class="nav-item pt-0 pb-0">
-                        <a class="nav-link" aria-current="page" role="button" href="liked.html" data-bs-toggle="tooltip" data-bs-placement="right" title="이미 찜목록 페이지에요!">
+                        <a class="nav-link" aria-current="page" role="button" href="liked.php" data-bs-toggle="tooltip" data-bs-placement="right" title="이미 찜목록 페이지에요!">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" class="bi bi-justify-left" viewBox="0 0 18 20" style="color:#eee;">
                                 <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
                             </svg>
@@ -50,7 +51,7 @@
                     <!--프로필 드롭다운-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="color: #eee;">
-                            타디스블루 님의 프로필<!--여기에 닉네임 표시해야 함-->
+                            <?=$nickName?> 님의 프로필<!--여기에 닉네임 표시해야 함-->
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" id="dropmenu">
                             <li>
@@ -99,6 +100,24 @@
         </div>
         <?php } ?>
    </nav>
+
+   <?php 
+        $likeSql = "select * from likeVideo where email = '$email'";
+        $resultForLikeSql = $conn->query($likeSql);
+        $row = $resultForLikeSql->fetch_assoc(); 
+    
+        // 찜한 영상들이 담길 배열
+        $likeVideosList = explode(",",$row['videos']);
+        // 마지막은 ,으로 끝나서 마지막 인덱스에 공백이 저장됨 unset을 이용하여 그것을 삭제.
+        unset($likeVideosList[count($likeVideosList)-1]);
+        // 찜한 영상의 개수
+        $cntLikeVideos = count($likeVideosList);
+        
+        if ($cntLikeVideos == 0)
+            echo "<script>alert('찜한 영상이 없습니다!'); history.go(-1)</script>";
+        else {
+    ?>
+    
 <!--찜 목록 컨테이너-->
     <div class="container px-1" style="margin-top: 90px;">
         <div class="container">
@@ -110,49 +129,33 @@
                     내가 찜한 목록
                 </h3>
             </div>
-        <!-- 이 부분을 찜목록 갯수에 따라 반복시켜주면 됨 -->
+            <?php
+                shuffle($likeVideosList);
+                for($i=0; $i < $cntLikeVideos; $i++){
+                    $title = $likeVideosList[$i];
+                    $LikeTitlesql = "select * from videoInfo where title = '$title'";
+                    $resultLikeTitle = $conn->query($LikeTitlesql);
+                    $row = $resultLikeTitle->fetch_assoc(); 
+                    
+            ?>
+            <!-- 이 부분을 찜목록 갯수에 따라 반복시켜주면 됨 -->
             <div class="row gx-5" >
                 <div class="col-lg-3 mt-3"> <!--사진이 들어갈 곳-->
                     <div class="border-0">
-                        <a href=""><img src="images/1.png" id="gallery"></a>
+                        <a href=""><img src="<?=$row['preview']?>" id="gallery"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 mt-3 pb-3" id="specbox"> <!--제목과 줄거리가 들어갈 곳-->
-                    <h3 id="title" class="mt-3">제목</h3>
-                    <p id="story">여기에는 줄거리가 들어갈 건데<br>
-                        제발 제대로 들어갔으면 좋을거 같다
+                    <h3 id="title" class="mt-3"><?=$row['title']?></h3>
+                    <p id="story"><?=$row['summary']?><br>                        
                     </p>
                 </div>   
             </div>
-        <!--여기까지 반복!-->
-            <div class="row gx-5" >
-                <div class="col-lg-3 mt-3"> <!--사진이 들어갈 곳-->
-                    <div class="border-0">
-                        <a href=""><img src="images/1.png" id="gallery"></a>
-                    </div>
-                </div>
-                <div class="col-lg-9 mt-3 pb-3" id="specbox"> <!--제목과 줄거리가 들어갈 곳-->
-                    <h3 id="title" class="mt-3">제목</h3>
-                    <p id="story">여기에는 줄거리가 들어갈 건데<br>
-                        제발 제대로 들어갔으면 좋을거 같다
-                    </p>
-                </div>   
-            </div>
-            <div class="row gx-5" >
-                <div class="col-lg-3 mt-3"> <!--사진이 들어갈 곳-->
-                    <div class="border-0">
-                        <a href=""><img src="images/1.png" id="gallery"></a>
-                    </div>
-                </div>
-                <div class="col-lg-9 mt-3 pb-3" id="specbox"> <!--제목과 줄거리가 들어갈 곳-->
-                    <h3 id="title" class="mt-3">제목</h3>
-                    <p id="story">여기에는 줄거리가 들어갈 건데<br>
-                        제발 제대로 들어갔으면 좋을거 같다
-                    </p>
-                </div>   
-            </div>
+            <!--여기까지 반복!-->
+            <?php } ?>
         </div>
     </div>
+    
 <!--멋 진 공 백-->
     <div class="container-fluid" id="void"></div>
 <!--모달 설정 파트-->
@@ -204,7 +207,11 @@
             myInput.focus()
         })
     </script>
+    
     <footer>
         <p>&copy;Copyright 2022 전현수 / 이우민</p>
     </footer>
+    <?php
+        }
+    ?>
 </body>

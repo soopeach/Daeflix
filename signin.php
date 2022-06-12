@@ -21,5 +21,5 @@ if(isset($result) && $result->num_rows > 0) {
 	echo "<script>location.href='browser.php'</script>";
 }
 else
-	echo "이메일 또는 패스워드가 맞지 않습니다.";
+	echo "<script>alert('이메일 또는 패스워드가 맞지 않습니다.'); history.go(-1)</script>";
 ?>

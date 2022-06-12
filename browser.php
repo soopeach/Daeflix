@@ -43,7 +43,7 @@
                         <a class="nav-link active" aria-current="page" href="#liked">내가 찜한 목록</a>
                     </li>
                     <li class="nav-item pt-0 pb-0">
-                        <a class="nav-link" aria-current="page" role="button" href="liked.html" data-bs-toggle="tooltip" data-bs-placement="right" title="찜목록 전체 보기">
+                        <a class="nav-link" aria-current="page" role="button" href="liked.php" data-bs-toggle="tooltip" data-bs-placement="right" title="찜목록 전체 보기">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" class="bi bi-justify-left" viewBox="0 0 18 20" style="color:#eee;">
                                 <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
                             </svg>
