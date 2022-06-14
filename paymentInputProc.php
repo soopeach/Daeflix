@@ -13,7 +13,7 @@ if ($cardNum != "" && $name != "" && $dateOfBirth != ""){
     echo "<script>alert('모든 항목을 입력해주세요.'); history.go(-1)</script>";
 }
 // 좋아요 리스트를 만들기 위함.
-$likeSql =  "INSERT INTO likeVideo VALUES('$email','')";
+$likeSql =  "INSERT INTO likeVideo VALUES('$email',',')";
 if($conn->query($sql) && $conn->query($likeSql)){
     
     echo "<script>alert('회원가입에 성공하였습니다.');location.href='index.php'</script>";

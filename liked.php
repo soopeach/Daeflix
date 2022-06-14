@@ -106,12 +106,18 @@
         $resultForLikeSql = $conn->query($likeSql);
         $row = $resultForLikeSql->fetch_assoc(); 
     
-        // 찜한 영상들이 담길 배열
-        $likeVideosList = explode(",",$row['videos']);
-        // 마지막은 ,으로 끝나서 마지막 인덱스에 공백이 저장됨 unset을 이용하여 그것을 삭제.
-        unset($likeVideosList[count($likeVideosList)-1]);
-        // 찜한 영상의 개수
-        $cntLikeVideos = count($likeVideosList);
+        // 찜한 영상이 없다면
+        if($row['videos'] == ','){
+            $cntLikeVideos = 0;
+        } else {
+            // 찜한 영상들이 담길 배열
+            $likeVideosList = explode(",",$row['videos']);
+            // 마지막과 맨 처음은 ,이라서 해당 인덱스에 공백이 저장됨 unset을 이용하여 그것을 삭제.
+            unset($likeVideosList[count($likeVideosList)-1]);
+            unset($likeVideosList[0]);
+            // 찜한 영상의 개수
+            $cntLikeVideos = count($likeVideosList);
+        }
         
         if ($cntLikeVideos == 0)
             echo "<script>alert('찜한 영상이 없습니다!'); history.go(-1)</script>";

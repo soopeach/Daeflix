@@ -23,7 +23,7 @@ if(in_array("$title", $likeVideosList)){
     unset($likeVideosList[$key]);
     
     $newLikeVideo = implode(',',$likeVideosList);
-    $sql = "update likeVideo set videos = '$newLikeVideo' where email = '$email'";
+    $sql = "update likeVideo set videos = '$newLikeVideo,' where email = '$email'";
     if($result = $conn->query($sql))
         echo "<script>alert('$title 을/를 찜! 취소하였습니다!'); history.go(-1)</script>";
     else 
