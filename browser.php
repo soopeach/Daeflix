@@ -149,58 +149,28 @@
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/blacktest.png">
+                    <img src="images/ad1.png">
                     <div class="carousel-caption d-none d-md-block" id="caption">
-                        <h3>가나다라마바사</h3>
-                        <p>여기는 줄거리</p>
                     </div>
                     <div class="carousel-caption d-block d-md-none">
-                        <h5>가나다라마바사</h5>
+    
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/2.png">
+                    <img src="images/ad2.png">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3 class="caption">가나다라마바사</h3>
-                        <p class="caption">여기는 줄거리</p>
                     </div>
                     <div class="carousel-caption d-block d-md-none">
-                        <h5>가나다라마바사</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/3.png">
+                    <img src="images/ad3.png">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3 class="caption">가나다라마바사</h3>
-                        <p class="caption">여기는 줄거리</p>
                     </div>
                     <div class="carousel-caption d-block d-md-none">
-                        <h5>가나다라마바사</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/4.png">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3 class="caption">가나다라마바사</h3>
-                        <p class="caption">여기는 줄거리</p>
-                    </div>
-                    <div class="carousel-caption d-block d-md-none">
-                        <h5>가나다라마바사</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/5.png">
-                    <div class="carousel-caption d-none d-md-block" id="caption">
-                        <h3 class="caption">가나다라마바사</h3>
-                        <p class="caption">여기는 줄거리</p>
-                    </div>
-                    <div class="carousel-caption d-block d-md-none">
-                        <h5>가나다라마바사</h5>
                     </div>
                 </div>
             </div>
