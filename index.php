@@ -29,14 +29,14 @@
                 <?php
                     if(!$logged) { // 로그인이 안 되어있을 경우
                 ?>
-                <a class="navbar-brand" href="index.php"><img src="images/Daeflix.PNG"></a>
+                <a class="navbar-brand" href="index.php"><img src="images/logo.PNG" style="width:100px; height:27px;"></a>
                 <!-- 오프캔버스로 숨겨주기 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon" data-bs-toggle="tooltip" data-bs-placement="left" title="어서 들어와요!"></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header" style="color: #eee; background-color: #000000;">
-                        <div class="offcanvas-title" id="offcanvasNavbarLabel"><img src="images/Daeflix.PNG"></div>
+                        <div class="offcanvas-title" id="offcanvasNavbarLabel"><img src="images/logo.PNG" style="width:100px; height:27px;"></div>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="background-color: #E50914;"></button>
                     </div>
                     <div class="offcanvas-body" style="background-color: #141414;">
@@ -72,13 +72,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/notlog1.png">
+                    <img src="images/ad1.png">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/notlogo2.png"> 
+                    <img src="images/ad2.png"> 
                 </div>
                 <div class="carousel-item">
-                    <img src="images/notlogo3.png">
+                    <img src="images/ad3.png">
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@
 <body style="background-color: #141414;">
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #000000;">
         <div class="container-fluid">
-            <div class="navbar-brand"><img src="images/Daeflix.PNG"></div>
+            <div class="navbar-brand"><img src="images/logo.PNG" style="width:100px; height:27px;"></a>
         </div>
     </nav>
     <div class="container-fluid" id="formbox" style="margin-top: 150px;">

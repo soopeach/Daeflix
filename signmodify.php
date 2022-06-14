@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #000000;">
         <div class="container-fluid">
             <div class="navbar-brand">
-                <a href="browser.php"><img src="images/Daeflix.PNG"></a>
+                <a href="browser.php"><img src="images/logo.PNG" style="width:100px; height:27px;"></a>
             </div>
         </div>
     </nav>

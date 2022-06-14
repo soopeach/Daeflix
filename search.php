@@ -28,7 +28,7 @@
         ?>
         <div class="container-fluid">
             <!--상단바 로고-->
-            <a class="navbar-brand" href="browser.php"><img src="images/Daeflix.PNG"></a>
+            <a class="navbar-brand" href="browser.php"><img src="images/logo.PNG" style="width:100px; height:27px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
