@@ -8,8 +8,12 @@
 ---
 
 ## 간단한 모습
-![Daeflix](https://user-images.githubusercontent.com/90144041/173825544-a48a0ddc-91ea-4f0c-a322-7a7f5d327eea.gif)
+![Daeflix](https://user-images.githubusercontent.com/90144041/173825544-a48a0ddc-91ea-4f0c-a322-7a7f5d327eea.gif) 
 
+[조금 더 자세한 구현 모습](https://soopeach.tistory.com/184)
+
+## 사이트 맵
+![DaeflixMap](https://user-images.githubusercontent.com/90144041/173838816-9e522897-d98a-4243-a737-6dea7cff8455.png)
 
 
 
