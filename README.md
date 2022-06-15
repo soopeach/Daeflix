@@ -83,5 +83,6 @@
   
 </details>
 
-
+## Dataflow
+![Daeflix-Dataflow](https://user-images.githubusercontent.com/90144041/173826226-4af91693-10d4-48bc-ab2b-6459dfd24668.png)
 
